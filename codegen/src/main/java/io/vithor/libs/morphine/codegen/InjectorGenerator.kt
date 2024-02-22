@@ -75,6 +75,7 @@ abstract class InjectorGenerator(val isKodeinErased: Boolean = true) : AbstractP
                     generateForClass(typeEl, typeEl, className)
                     // generateForConstructor(it)
                 }
+                else -> Unit
             }
         }
 

@@ -2,12 +2,12 @@
 
 object Versions {
     // Build
-    const val kotlin = "1.6.10"
-    const val gradle = "4.2.0"
+    const val kotlin = "1.7.0"
+    const val gradle = "7.0.3"
 
-    const val compileSdk = 28
+    const val compileSdk = 33
     const val minSdk = 21
-    const val targetSdk = 28
+    const val targetSdk = 33
 
     // Morphine
     const val morphine = "0.2.0"
@@ -21,7 +21,6 @@ object Versions {
     const val safeArgs = nav
     const val activity = "1.0.0-alpha08"
     const val fragment = "1.1.0-alpha08"
-    const val databinding = gradle
 
     // UI Widgets
     const val androidMaterial = "1.0.0"
