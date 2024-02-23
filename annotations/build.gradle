@@ -11,8 +11,8 @@ dependencies {
     implementation KotlinLibraries.kotlinJvm
 }
 
-sourceCompatibility = "7"
-targetCompatibility = "7"
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
 
 ext {
     packagingMode = 'jar'

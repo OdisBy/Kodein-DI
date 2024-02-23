@@ -75,6 +75,7 @@ abstract class InjectorGenerator : AbstractProcessor() {
                     generateForClass(typeEl, typeEl, className)
                     // generateForConstructor(it)
                 }
+                else -> Unit
             }
         }
 

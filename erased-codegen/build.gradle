@@ -23,13 +23,16 @@ dependencies {
     implementation KotlinLibraries.kotlinJvm
 
     // configuration generator for service providers
-    implementation "com.google.auto.service:auto-service:1.0-rc5"
-    kapt "com.google.auto.service:auto-service:1.0-rc5"
+    kapt 'com.google.auto.service:auto-service:1.0-rc6'
+    compileOnly 'com.google.auto.service:auto-service-annotations:1.0-rc6'
+
+    implementation("net.ltgt.gradle.incap:incap:1.0.0")
+    kapt("net.ltgt.gradle.incap:incap-processor:1.0.0")
 
 }
 
-sourceCompatibility = "7"
-targetCompatibility = "7"
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
 
 ext {
     packagingMode = 'jar'

@@ -4,12 +4,14 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 33
+
+    namespace = "io.vithor.morphine.sample"
 
     defaultConfig {
         applicationId "io.vithor.morphine.sample"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
@@ -38,7 +40,10 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation project(Modules.annotations)
+    implementation 'androidx.test.ext:junit-ktx:1.1.5'
     kapt project(Modules.erased)
+    kapt project(Modules.generic)
+    kapt project(Modules.core)
 //    implementation("io.vithor.libs:morphine-api:${Versions.morphine}")
 //    kapt("io.vithor.libs:morphine-erased-codegen:${Versions.morphine}")
 
