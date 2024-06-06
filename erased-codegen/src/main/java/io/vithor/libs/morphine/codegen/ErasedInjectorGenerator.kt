@@ -12,4 +12,8 @@ import javax.lang.model.SourceVersion
 @SupportedSourceVersion(SourceVersion.RELEASE_8) // to support Java 8
 @SupportedOptions(InjectorGenerator.KAPT_KOTLIN_GENERATED_OPTION_NAME)
 @IncrementalAnnotationProcessor(IncrementalAnnotationProcessorType.DYNAMIC)
-class ErasedInjectorGenerator : InjectorGenerator(isKodeinErased = true)
+class ErasedInjectorGenerator : InjectorGenerator(isKodeinErased = true) {
+    override fun getSupportedOptions() = setOf(
+        ErasedInjectorGenerator::class.java.canonicalName
+    )
+}
