@@ -11,5 +11,5 @@ import javax.lang.model.SourceVersion
 @AutoService(Processor::class) // For registering the service
 @SupportedSourceVersion(SourceVersion.RELEASE_8) // to support Java 8
 @SupportedOptions(InjectorGenerator.KAPT_KOTLIN_GENERATED_OPTION_NAME)
-@IncrementalAnnotationProcessor(IncrementalAnnotationProcessorType.ISOLATING)
+@IncrementalAnnotationProcessor(IncrementalAnnotationProcessorType.DYNAMIC)
 class ErasedInjectorGenerator : InjectorGenerator(isKodeinErased = true)
